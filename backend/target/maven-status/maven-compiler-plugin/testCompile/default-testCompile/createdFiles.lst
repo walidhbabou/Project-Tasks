@@ -1,0 +1,3 @@
+com\JwtSetup\JwtSetup\JwtSetupApplicationTests.class
+com\JwtSetup\JwtSetup\service\ProjectServiceTests.class
+com\JwtSetup\JwtSetup\service\JwtUtilsTests.class

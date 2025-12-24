@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 15%;
+
+    --primary: 198 93% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 198 20% 96%;
+    --secondary-foreground: 240 10% 15%;
+
+    --muted: 198 20% 96%;
+    --muted-foreground: 198 20% 46%;
+
+    --accent: 198 93% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 198 30% 90%;
+    --input: 198 30% 90%;
+    --ring: 198 93% 60%;
+
+    --radius: 0.5rem;
+
+    /* Custom Sky Blue tokens */
+    --sidebar: 198 70% 25%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-muted: 198 50% 40%;
+    --sidebar-accent: 198 60% 35%;
+    --sidebar-hover: 198 65% 33%;
+
+    --success: 142 70% 45%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 95% 64%;
+    --warning-foreground: 240 10% 15%;
+
+    --tag-blue: 198 93% 60%;
+    --tag-green: 142 70% 45%;
+    --tag-orange: 25 95% 60%;
+    --tag-purple: 270 60% 55%;
+    --tag-pink: 330 80% 65%;
+  }
+
+  .dark {
+    --background: 240 10% 10%;
+    --foreground: 0 0% 95%;
+
+    --card: 240 10% 12%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 240 10% 12%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 198 93% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 198 40% 20%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 198 40% 20%;
+    --muted-foreground: 198 30% 70%;
+
+    --accent: 198 93% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 198 40% 25%;
+    --input: 198 40% 25%;
+    --ring: 198 93% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer utilities {
+  .sidebar-gradient {
+    background: hsl(var(--sidebar));
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.2s ease-out;
+  }
+
+  .animate-slide-in {
+    animation: slideIn 0.3s ease-out;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.2s ease-out;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
